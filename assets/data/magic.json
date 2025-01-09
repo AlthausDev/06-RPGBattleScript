@@ -1,0 +1,14 @@
+{
+    "fire_spells": [
+        { "name": "Fireball", "cost": 10, "dmg": 6 },
+        { "name": "Inferno", "cost": 20, "dmg": 12 }
+    ],
+    "ice_spells": [
+        { "name": "Frostbite", "cost": 8, "dmg": 5 },
+        { "name": "Blizzard", "cost": 15, "dmg": 10 }
+    ],
+    "thunder_spells": [
+        { "name": "Thunderbolt", "cost": 12, "dmg": 7 },
+        { "name": "Storm", "cost": 25, "dmg": 15 }
+    ]
+}

@@ -1,8 +1,5 @@
 import random
 
-from core.mechanics.spells import magic
-
-
 class Character:
     def __init__(self, name, hp=10, mp=10, atk=2, df=0, mdf=0, magic=None):
         self.name = name
@@ -20,20 +17,17 @@ class Character:
         return random.randint(self.atk - 5, self.atk + 5)
 
     def generate_spell_damage(self, spell_choice):
-        spell = magic[spell_choice]
+        # Accede a self.magic en lugar de magic
+        spell = self.magic[spell_choice]
 
-        if self.mp >= spell["cost"]:
-
-            self.reduce_mp(spell["cost"])
-            return random.randint(spell["dmg"] - 5, spell["dmg"] + 5)
-
+        if self.mp >= spell.cost:
+            self.reduce_mp(spell.cost)
+            return random.randint(spell.dmg - 5, spell.dmg + 5)
         else:
             print("\nNot enough MP!")
             return None
 
-
     def take_damage(self, dmg, type):
-
         df = 0
         if type == "physical":
             df = self.df

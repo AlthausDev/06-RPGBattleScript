@@ -1,13 +1,19 @@
+from core.data.loader import load_spells
 from core.entities.enemy import Enemy
 from core.entities.player import Player
+from core.entities.character import Character
 from core.mechanics.combat import battle_round
 from ui.messages import combat_start_message, display_victory_message, display_defeat_message
-from core.mechanics.spells import magic
+
+spells = load_spells("assets/data/magic.json")
 
 def main():
+    player_spells = spells["fire_spells"] + spells["thunder_spells"]  # Combina categorías
+    enemy_spells = spells["ice_spells"]
+
     # Configurar personajes
-    player = Player("Hero", 26, 65, 6, 3, 2, magic)
-    enemy = Enemy("Goblin", 38, 20, 5, 3, 2, magic)
+    player = Player("Hero", 26, 65, 6, 3, 2, player_spells)
+    enemy = Enemy("Goblin", 38, 20, 5, 3, 2, enemy_spells)
 
     # Inicio del combate
     combat_start_message(enemy.name)

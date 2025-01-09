@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="refactor: reorder project structure">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added generate damage from magic sources">
+      <change afterPath="$PROJECT_DIR$/assets/data/magic.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/spells.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/entities/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/enemy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/mechanics/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/mechanics/spells.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +59,7 @@
     "Python.__main__.executor": "Run",
     "Python.combat.executor": "Run",
     "Python.game.executor": "Run",
+    "Python.player.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -65,6 +69,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -105,13 +114,22 @@
       <option name="project" value="LOCAL" />
       <updated>1736439828449</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: added generate damage from magic sources">
+      <option name="closed" value="true" />
+      <created>1736444675706</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736444675706</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build: initial Commit" />
     <MESSAGE value="feat: added first actions" />
     <MESSAGE value="refactor: reorder project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: reorder project structure" />
+    <MESSAGE value="feat: added generate damage from magic sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added generate damage from magic sources" />
   </component>
 </project>
