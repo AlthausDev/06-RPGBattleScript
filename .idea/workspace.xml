@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added first actions">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/character.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/enemy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/mechanics/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/mechanics/spells.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/mechanics/status_effects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/colors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/messages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="refactor: reorder project structure">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/character.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/enemy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/mechanics/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,12 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1736358506850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: reorder project structure">
+      <option name="closed" value="true" />
+      <created>1736439828449</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736439828449</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build: initial Commit" />
     <MESSAGE value="feat: added first actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added first actions" />
+    <MESSAGE value="refactor: reorder project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: reorder project structure" />
   </component>
 </project>
