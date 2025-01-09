@@ -8,7 +8,7 @@ from ui.messages import combat_start_message, display_victory_message, display_d
 spells = load_spells("assets/data/magic.json")
 
 def main():
-    player_spells = spells["fire_spells"] + spells["thunder_spells"]  # Combina categorías
+    player_spells = spells["fire_spells"] + spells["healing_spells"]  # Combina categorías
     enemy_spells = spells["ice_spells"]
 
     # Configurar personajes

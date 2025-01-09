@@ -7,6 +7,9 @@ def load_spells(file_path):
 
     spells = {}
     for category, spell_list in data.items():
-        spells[category] = [Spell(spell["name"], spell["cost"], spell["dmg"]) for spell in spell_list]
+        spells[category] = [
+            Spell(spell.get("name"), spell.get("cost"), spell.get("dmg", 0), spell.get("heal", 0))
+            for spell in spell_list
+        ]
 
     return spells

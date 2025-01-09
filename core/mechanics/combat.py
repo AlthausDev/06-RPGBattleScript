@@ -1,3 +1,6 @@
+import random
+
+
 def battle_round(player, enemy):
     print("=================")
     player.apply_status_effects()
@@ -19,15 +22,27 @@ def battle_round(player, enemy):
             print("\nInvalid spell choice!")
             return
 
-        spell_damage = player.generate_spell_damage(spell_choice)
-        if spell_damage is None:
-            return  # No hay suficiente MP, se sale de la función
-
         spell = player.magic[spell_choice]
-        effective_dmg = enemy.take_damage(spell_damage, "magic")
-        print(f"\n{player.name} cast {spell.name} for {effective_dmg} damage. Enemy HP: {enemy.hp}. Enemy MP: {enemy.mp}")
 
-    # Acción del enemigo
+        if player.mp < spell.cost:
+            print("\nNot enough MP!")
+            return
+
+        if spell.dmg > 0:  # Hechizo de daño
+            spell_damage = random.randint(spell.dmg - 2, spell.dmg + 2)
+            effective_dmg = enemy.take_damage(spell_damage, "magic")
+            player.reduce_mp(spell.cost)
+            print(f"\n{player.name} cast {spell.name} for {effective_dmg} damage. Enemy HP: {enemy.hp}")
+            print(f"Remaining MP: {player.mp}")
+
+        elif spell.heal > 0:  # Hechizo de curación
+            healing = random.randint(spell.heal - 2, spell.heal + 2)
+            player.hp = min(player.max_hp, player.hp + healing)
+            player.reduce_mp(spell.cost)
+            print(f"\n{player.name} cast {spell.name} and healed for {healing} HP. Your HP: {player.hp}")
+            print(f"Remaining MP: {player.mp}")
+
+    # Enemy action
     enemy_dmg = enemy.generate_damage()
     effective_dmg = player.take_damage(enemy_dmg, "physical")
-    print(f"\n{enemy.name} attacks for {effective_dmg}. Your HP: {player.hp}. Your MP: {player.mp}")
+    print(f"\n{enemy.name} attacks for {effective_dmg}. Your HP: {player.hp}")

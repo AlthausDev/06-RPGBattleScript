@@ -10,5 +10,9 @@
     "thunder_spells": [
         { "name": "Thunderbolt", "cost": 12, "dmg": 7 },
         { "name": "Storm", "cost": 25, "dmg": 15 }
+    ],
+    "healing_spells": [
+        { "name": "Cure", "cost": 10, "heal": 8 },
+        { "name": "Regenerate", "cost": 20, "heal": 15 }
     ]
 }

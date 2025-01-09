@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added generate damage from magic sources">
-      <change afterPath="$PROJECT_DIR$/assets/data/magic.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/spells.py" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added json with magic and loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/magic.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/magic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/data/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/spells.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/spells.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/mechanics/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/mechanics/spells.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736444675706</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: added json with magic and loader">
+      <option name="closed" value="true" />
+      <created>1736446931802</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736446931802</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -130,6 +134,7 @@
     <MESSAGE value="feat: added first actions" />
     <MESSAGE value="refactor: reorder project structure" />
     <MESSAGE value="feat: added generate damage from magic sources" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added generate damage from magic sources" />
+    <MESSAGE value="feat: added json with magic and loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added json with magic and loader" />
   </component>
 </project>
