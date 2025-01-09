@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="build: initial Commit">
-      <change afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/game.py" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added first actions">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/character.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/enemy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/mechanics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/mechanics/spells.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/mechanics/status_effects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/colors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/messages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/game.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +41,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AlthausDev"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AlthausDev/06-RPGBattleScript-.git",
+    "accountId": "09ba0573-0e29-4f96-a374-ca57f57cd873"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2rM60qThrjPYBLqyP2Dl5vf0vFx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,12 +66,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Python.__main__.executor": "Run",
+    "Python.combat.executor": "Run",
     "Python.game.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "master",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -71,11 +103,20 @@
       <option name="project" value="LOCAL" />
       <updated>1736356540642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: added first actions">
+      <option name="closed" value="true" />
+      <created>1736358506850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736358506850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build: initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="build: initial Commit" />
+    <MESSAGE value="feat: added first actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added first actions" />
   </component>
 </project>
