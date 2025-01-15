@@ -1,5 +1,5 @@
 import json
-from core.entities.spells import Spell
+from core.entities.base.spells import Spell
 
 def load_spells(file_path):
     with open(file_path, "r") as file:
