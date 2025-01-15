@@ -2,22 +2,63 @@ import random
 
 class Character:
     def __init__(self, name, hp=10, mp=10, atk=2, df=0, mdf=0, magic=None):
-        self.name = name
-        self.max_hp = hp
-        self.hp = hp
-        self.max_mp = mp
-        self.mp = mp
-        self.atk = atk
-        self.df = df
-        self.mdf = mdf
-        self.magic = magic or []
-        self.status_effects = []
+        self._name = name
+        self._max_hp = hp
+        self._hp = hp
+        self._max_mp = mp
+        self._mp = mp
+        self._atk = atk
+        self._df = df
+        self._mdf = mdf
+        self._magic = magic or []
+        self._status_effects = []
 
+    # Getters
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def max_hp(self):
+        return self._max_hp
+
+    @property
+    def hp(self):
+        return self._hp
+
+    @property
+    def max_mp(self):
+        return self._max_mp
+
+    @property
+    def mp(self):
+        return self._mp
+
+    @property
+    def atk(self):
+        return self._atk
+
+    @property
+    def df(self):
+        return self._df
+
+    @property
+    def mdf(self):
+        return self._mdf
+
+    @property
+    def magic(self):
+        return self._magic
+
+    @property
+    def status_effects(self):
+        return self._status_effects
+
+    # Métodos de la clase
     def generate_damage(self):
         return random.randint(self.atk - 5, self.atk + 5)
 
     def generate_spell_damage(self, spell_choice):
-        # Accede a self.magic en lugar de magic
         spell = self.magic[spell_choice]
 
         if self.mp >= spell.cost:
@@ -35,9 +76,9 @@ class Character:
             df = self.mdf
 
         effective_dmg = max(0, dmg - df)
-        self.hp -= effective_dmg
-        if self.hp < 0:
-            self.hp = 0
+        self._hp -= effective_dmg
+        if self._hp < 0:
+            self._hp = 0
         return effective_dmg  # Devuelve solo el daño real
 
     def apply_status_effects(self):
@@ -47,7 +88,7 @@ class Character:
                 self.status_effects.remove(effect)
 
     def reduce_mp(self, cost):
-        self.mp -= cost
+        self._mp -= cost
 
     def is_alive(self):
         return self.hp > 0
