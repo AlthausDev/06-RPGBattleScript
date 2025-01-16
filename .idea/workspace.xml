@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="refactor: reorder entities">
-      <change afterPath="$PROJECT_DIR$/core/entities/items/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/items/item.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/items/potion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/items/throwable.py" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: modular loaders, few enhanced in various classes">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/data/load_game_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/load_game_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/base/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/base/character.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/entities/base/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/base/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/mechanics/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,24 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.character.executor&quot;: &quot;Run&quot;,
-    &quot;Python.combat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.player.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/main-projects/05-IA/06-RPGBattleScript/core/mechanics&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.__main__.executor": "Run",
+    "Python.character.executor": "Run",
+    "Python.combat.executor": "Run",
+    "Python.game.executor": "Run",
+    "Python.load_game_data.executor": "Run",
+    "Python.player.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Projects/main-projects/05-IA/06-RPGBattleScript/core/mechanics",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\mechanics" />
@@ -161,7 +161,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736955614576</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor: item now is a data class">
+      <option name="closed" value="true" />
+      <created>1737045862440</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737045862440</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: added items.json and throwable dataclass">
+      <option name="closed" value="true" />
+      <created>1737049765384</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737049765384</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: modular loaders, few enhanced in various classes">
+      <option name="closed" value="true" />
+      <created>1737050861133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737050861133</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -173,6 +197,9 @@
     <MESSAGE value="feat: added healing mechanic" />
     <MESSAGE value="feat: added getters to character base class" />
     <MESSAGE value="refactor: reorder entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: reorder entities" />
+    <MESSAGE value="refactor: item now is a data class" />
+    <MESSAGE value="feat: added items.json and throwable dataclass" />
+    <MESSAGE value="feat: modular loaders, few enhanced in various classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: modular loaders, few enhanced in various classes" />
   </component>
 </project>

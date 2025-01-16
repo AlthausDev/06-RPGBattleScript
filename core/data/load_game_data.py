@@ -2,7 +2,7 @@ from core.data.load_items import load_items
 from core.data.load_spells import load_spells
 
 
-def load_game_data(spells_path, items_path):
+def load_game_data(spells_path: str, items_path: str):
     """
     Carga hechizos e ítems desde archivos JSON separados.
 
