@@ -1,6 +1,6 @@
 from core.data.loader import load_spells
-from core.entities.enemy import Enemy
-from core.entities.player import Player
+from core.entities.enemy.enemy import Enemy
+from core.entities.player.player import Player
 from core.mechanics.combat import battle_round
 from ui.messages import combat_start_message, display_victory_message, display_defeat_message
 

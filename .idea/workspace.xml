@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="feat: added getters to character base class">
-      <change afterPath="$PROJECT_DIR$/core/entities/base/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/base/inventory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/enemy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/entities/player/__init__.py" afterDir="false" />
+    <list default="true" id="36652d4b-aff1-43ff-8e73-5b65a55a4d33" name="Changes" comment="refactor: reorder entities">
+      <change afterPath="$PROJECT_DIR$/core/entities/items/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/items/item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/items/potion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/entities/items/throwable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/base/character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/enemy/enemy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/player/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/entities/spells.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/base/spells.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/mechanics/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/mechanics/combat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/entities/base/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/entities/base/inventory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,33 +52,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.__main__.executor": "Run",
-    "Python.character.executor": "Run",
-    "Python.combat.executor": "Run",
-    "Python.game.executor": "Run",
-    "Python.player.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Projects/main-projects/05-IA/06-RPGBattleScript/core/mechanics",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.character.executor&quot;: &quot;Run&quot;,
+    &quot;Python.combat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.player.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/main-projects/05-IA/06-RPGBattleScript/core/mechanics&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\mechanics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities" />
       <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities\enemy" />
       <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities\base" />
       <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities\player" />
-      <recent name="D:\Projects\main-projects\05-IA\06-RPGBattleScript\core\entities" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -158,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736945004111</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor: reorder entities">
+      <option name="closed" value="true" />
+      <created>1736955614576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736955614576</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -169,6 +172,7 @@
     <MESSAGE value="feat: added json with magic and loader" />
     <MESSAGE value="feat: added healing mechanic" />
     <MESSAGE value="feat: added getters to character base class" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added getters to character base class" />
+    <MESSAGE value="refactor: reorder entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: reorder entities" />
   </component>
 </project>
