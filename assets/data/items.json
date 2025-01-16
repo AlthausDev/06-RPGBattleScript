@@ -1,0 +1,66 @@
+{
+    "potions": [
+        {
+            "id": 1,
+            "name": "Poción de Curación",
+            "type": "potion",
+            "description": "Restaura vida.",
+            "prop": 50.0,
+            "potion_type": "healing"
+        },
+        {
+            "id": 2,
+            "name": "Poción de Daño",
+            "type": "potion",
+            "description": "Inflige daño al enemigo.",
+            "prop": 20.0,
+            "potion_type": "damage"
+        },
+        {
+            "id": 3,
+            "name": "Poción de Maná",
+            "type": "potion",
+            "description": "Restaura puntos de maná.",
+            "prop": 30.0,
+            "potion_type": "mana"
+        }
+    ],
+    "throwables": [
+        {
+            "id": 4,
+            "name": "Cuchillo Arrojadizo",
+            "type": "throwable",
+            "description": "Un cuchillo balanceado para ser lanzado.",
+            "prop": 15.0,
+            "throwable_type": "knife",
+            "subtype": "throwing_knife"
+        },
+        {
+            "id": 5,
+            "name": "Granada de Humo",
+            "type": "throwable",
+            "description": "Crea una pantalla de humo.",
+            "prop": 0.0,
+            "throwable_type": "grenade",
+            "subtype": "smoke_grenade"
+        },
+        {
+            "id": 6,
+            "name": "Granada de Fragmentación",
+            "type": "throwable",
+            "description": "Explosivo que causa daño en un área.",
+            "prop": 100.0,
+            "throwable_type": "grenade",
+            "subtype": "frag_grenade"
+        },
+        {
+            "id": 7,
+            "name": "Daga Envenenada",
+            "type": "throwable",
+            "description": "Un arma mortal recubierta de veneno.",
+            "prop": 25.0,
+            "throwable_type": "knife",
+            "subtype": "poisoned_knife"
+        }
+    ]
+}

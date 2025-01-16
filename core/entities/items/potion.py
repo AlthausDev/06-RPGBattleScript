@@ -1,4 +1,6 @@
+import json
 from enum import Enum
+from dataclasses import dataclass, asdict, field
 from core.entities.items.item import Item
 
 class PotionType(Enum):
@@ -9,37 +11,19 @@ class PotionType(Enum):
     MANA = "mana"
     DAMAGE = "damage"
 
+@dataclass
 class Potion(Item):
     """
     Representa una poción en el juego. Hereda de Item.
     """
-    def __init__(self, name: str, potion_type: PotionType, description: str, prop: float):
-        """
-        Constructor para Potion.
-        """
-        super().__init__(name=name, type="potion", description=description, prop=prop)
-        self._potion_type = potion_type
+    potion_type: PotionType = PotionType.HEALING
 
-    @property
-    def potion_type(self) -> PotionType:
-        """
-        Getter para el tipo de poción.
-        """
-        return self._potion_type
-
-    @potion_type.setter
-    def potion_type(self, value: PotionType):
-        """
-        Setter para el tipo de poción con validación.
-        """
-        if not isinstance(value, PotionType):
+    def __post_init__(self):
+        super().__post_init__()
+        if not isinstance(self.potion_type, PotionType):
             raise ValueError("El tipo de poción debe ser una instancia de PotionType.")
-        self._potion_type = value
 
     def use(self):
-        """
-        Implementa el uso específico de una poción.
-        """
         effect = (
             f"cura {self.prop} puntos de vida"
             if self.potion_type == PotionType.HEALING
@@ -48,3 +32,19 @@ class Potion(Item):
             else f"causa {self.prop} puntos de daño"
         )
         print(f"Usaste la poción '{self.name}'. Esta {effect}.")
+
+    def to_dict(self):
+        """
+        Convierte la poción a un diccionario, serializando enums como cadenas.
+        """
+        data = asdict(self)
+        data["potion_type"] = self.potion_type.value
+        return data
+
+    @classmethod
+    def from_dict(cls, data):
+        """
+        Crea una instancia de Potion desde un diccionario.
+        """
+        data["potion_type"] = PotionType(data["potion_type"])
+        return cls(**data)
