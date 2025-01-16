@@ -5,59 +5,51 @@ class Item:
     """
     Representa un ítem genérico en el juego.
     """
-    _name: str = field(default="")
-    _type: str = field(default="")
-    _description: str = field(default="")
-    _prop: float = field(default=0.0, repr=False)  # Campo protegido, oculto en la representación oficial.
+    id: int
+    name: str
+    type: str
+    description: str
+    prop: float = field(default=0.0)
 
     def __post_init__(self):
         """
         Realiza validaciones después de la inicialización automática de la dataclass.
         """
-        if not self._name:
+        self.validate_id(self.id)
+        self.validate_name(self.name)
+        self.validate_type(self.type)
+        self.validate_description(self.description)
+        self.validate_prop(self.prop)
+
+    @staticmethod
+    def validate_id(value: int):
+        """Valida el atributo `id`."""
+        if not isinstance(value, int) or value <= 0:
+            raise ValueError("El ID debe ser un entero positivo.")
+
+    @staticmethod
+    def validate_name(value: str):
+        """Valida el atributo `name`."""
+        if not value:
             raise ValueError("El nombre no puede estar vacío.")
-        if not self._type:
+
+    @staticmethod
+    def validate_type(value: str):
+        """Valida el atributo `type`."""
+        if not value:
             raise ValueError("El tipo no puede estar vacío.")
-        if not self._description:
+
+    @staticmethod
+    def validate_description(value: str):
+        """Valida el atributo `description`."""
+        if not value:
             raise ValueError("La descripción no puede estar vacía.")
-        if self._prop < 0:
+
+    @staticmethod
+    def validate_prop(value: float):
+        """Valida el atributo `prop`."""
+        if value < 0:
             raise ValueError("La propiedad no puede ser negativa.")
-
-    @property
-    def name(self) -> str:
-        """Getter para el atributo `name`."""
-        return self._name
-
-    @name.setter
-    def name(self, value: str):
-        """Setter para validar y asignar `name`."""
-        if not value:
-            raise ValueError("El nombre no puede estar vacío.")
-        self._name = value
-
-    @property
-    def type(self) -> str:
-        """Getter para el atributo `type`."""
-        return self._type
-
-    @type.setter
-    def type(self, value: str):
-        """Setter para validar y asignar `type`."""
-        if not value:
-            raise ValueError("El tipo no puede estar vacío.")
-        self._type = value
-
-    @property
-    def description(self) -> str:
-        """Getter para el atributo `description`."""
-        return self._description
-
-    @description.setter
-    def description(self, value: str):
-        """Setter para validar y asignar `description`."""
-        if not value:
-            raise ValueError("La descripción no puede estar vacía.")
-        self._description = value
 
     @property
     def prop(self) -> float:
@@ -67,8 +59,7 @@ class Item:
     @prop.setter
     def prop(self, value: float):
         """Setter para validar y asignar `prop`."""
-        if value < 0:
-            raise ValueError("La propiedad no puede ser negativa.")
+        self.validate_prop(value)
         self._prop = value
 
     def use(self):
@@ -76,9 +67,3 @@ class Item:
         Método genérico para usar un ítem. Puede ser sobrescrito por clases derivadas.
         """
         print(f"Usaste el ítem '{self.name}' con un efecto de {self.prop}.")
-
-    def __repr__(self):
-        """
-        Representación oficial de la clase para propósitos de depuración.
-        """
-        return f"Item(name='{self.name}', type='{self.type}', description='{self.description}', prop={self.prop})"

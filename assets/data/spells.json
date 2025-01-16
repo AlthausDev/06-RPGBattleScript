@@ -1,0 +1,32 @@
+{
+    "fire_spells": [
+        { "id": 1, "name": "Fireball", "cost": 10, "dmg": 6, "description": "Lanza una bola de fuego hacia el enemigo." },
+        { "id": 2, "name": "Inferno", "cost": 20, "dmg": 12, "description": "Causa una explosión de fuego en un área grande." },
+        { "id": 3, "name": "Flame Shield", "cost": 15, "dmg": 0, "heal": 0, "description": "Crea un escudo de fuego que reduce el daño recibido." }
+    ],
+    "ice_spells": [
+        { "id": 4, "name": "Frostbite", "cost": 8, "dmg": 5, "description": "Congela parcialmente al enemigo, reduciendo su velocidad." },
+        { "id": 5, "name": "Blizzard", "cost": 15, "dmg": 10, "description": "Invoca una tormenta de hielo que daña a todos los enemigos cercanos." },
+        { "id": 6, "name": "Ice Barrier", "cost": 12, "dmg": 0, "heal": 0, "description": "Crea un muro de hielo que protege al lanzador." }
+    ],
+    "thunder_spells": [
+        { "id": 7, "name": "Thunderbolt", "cost": 12, "dmg": 7, "description": "Lanza un rayo que inflige daño directo a un objetivo." },
+        { "id": 8, "name": "Storm", "cost": 25, "dmg": 15, "description": "Invoca una tormenta eléctrica que afecta a todos los enemigos en el área." },
+        { "id": 9, "name": "Static Charge", "cost": 10, "dmg": 5, "description": "Carga al enemigo con electricidad, causando daño adicional con cada ataque." }
+    ],
+    "healing_spells": [
+        { "id": 10, "name": "Cure", "cost": 10, "heal": 8, "description": "Restaura una pequeña cantidad de salud a un aliado." },
+        { "id": 11, "name": "Regenerate", "cost": 20, "heal": 15, "description": "Aplica un efecto de curación continua durante varios turnos." },
+        { "id": 12, "name": "Mass Heal", "cost": 30, "heal": 12, "description": "Restaura salud a todos los aliados cercanos." }
+    ],
+    "arcane_spells": [
+        { "id": 13, "name": "Arcane Blast", "cost": 12, "dmg": 8, "description": "Lanza una onda de energía arcana que daña a los enemigos." },
+        { "id": 14, "name": "Mana Surge", "cost": 10, "heal": 0, "description": "Recupera una gran cantidad de maná del lanzador." },
+        { "id": 15, "name": "Time Warp", "cost": 25, "dmg": 0, "heal": 0, "description": "Aumenta la velocidad de ataque de todos los aliados durante un corto periodo de tiempo." }
+    ],
+    "shadow_spells": [
+        { "id": 16, "name": "Shadow Bolt", "cost": 10, "dmg": 7, "description": "Lanza un proyectil oscuro que inflige daño al enemigo." },
+        { "id": 17, "name": "Drain Life", "cost": 15, "dmg": 5, "heal": 5, "description": "Drena la vida del enemigo para curar al lanzador." },
+        { "id": 18, "name": "Dark Pact", "cost": 20, "heal": 15, "description": "Convierte salud del lanzador en maná adicional." }
+    ]
+}
